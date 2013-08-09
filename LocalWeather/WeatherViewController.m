@@ -1,0 +1,91 @@
+//
+//  ViewController.m
+//  LocalWeather
+//
+//  Created by Chris Woodard on 7/4/13.
+//  Copyright (c) 2013 Chris Woodard.. All rights reserved.
+//
+
+#import "WeatherViewController.h"
+#import "WeatherFetcher.h"
+#import "SVProgressHUD.h"
+#import "ForecastTableCell.h"
+
+@interface WeatherViewController ()
+
+@property (nonatomic, strong) WeatherForecast *forecast;
+
+@end
+
+@implementation WeatherViewController
+
+-(IBAction)refresh:(id)sender
+{
+    WeatherFetcher *fetcher = [WeatherFetcher defaultFetcher];
+
+    [SVProgressHUD showWithStatus:@"Fetching Current Weather"];
+    [fetcher fetchCurrentLocalWeatherWithCompletion:^{
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            CurrentWeather *cw = [fetcher currentWeather];
+            [_currentWeatherView setLabelsFromModel:cw];
+            [SVProgressHUD dismiss];
+        });
+    } orFailure:^(NSError *err){
+        [SVProgressHUD dismiss];
+        //TBD - display error
+    }];
+
+    [SVProgressHUD showWithStatus:@"Fetching Weather Forecast"];
+    [fetcher fetch3DayLocalForecastWithCompletion:^{
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            _forecast = [fetcher lastForecast];
+            [_forecastTable reloadData];
+            [SVProgressHUD dismiss];
+        });
+    } orFailure:^(NSError *err){
+        [SVProgressHUD dismiss];
+        //TBD - display error
+    }];
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];    
+    [self refresh:nil];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+#pragma mark - UITableView data source
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSInteger numDaysInForecast = 0;
+    if(nil != _forecast)
+        numDaysInForecast =[_forecast numberOfDaysInForecast];
+    return numDaysInForecast;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [ForecastTableCell preferredHeight];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ForecastTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ForecastTableCell"];
+    if(nil == cell)
+        cell = (ForecastTableCell *)[[ForecastTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ForecastTableCell"];
+    [cell setLabelsFromData:[_forecast forecastAtIndex:indexPath.row]];
+    return cell;
+}
+
+@end

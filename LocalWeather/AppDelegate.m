@@ -3,7 +3,7 @@
 //  LocalWeather
 //
 //  Created by Chris Woodard on 7/4/13.
-//  Copyright (c) 2013 Cocoaheads. All rights reserved.
+//  Copyright (c) 2013 Chris Woodard.. All rights reserved.
 //
 
 #import "AppDelegate.h"

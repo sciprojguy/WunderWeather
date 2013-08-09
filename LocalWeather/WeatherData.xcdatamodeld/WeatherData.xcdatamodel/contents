@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="13A510d" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CurrentLocalWeather" representedClassName="CurrentLocalWeather" syncable="YES">
+        <attribute name="airPressure" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="nowcastDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="rainInLast3Hours" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="relativeHumidity" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sunriseTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sunsetTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="tempCurrent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="tempMax" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="tempMin" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="weatherDescr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weatherIcon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weatherId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="weatherTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="windSpeed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CurrentLocalWeather" positionX="160" positionY="192" width="128" height="360"/>
+    </elements>
+</model>
