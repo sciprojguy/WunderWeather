@@ -11,6 +11,8 @@
 
 @interface WeatherForecast : NSObject
 
+@property (nonatomic, strong) NSArray *forecastDays;
+
 -(WeatherForecast *)initWithForecastArray:(NSArray *)simpleForecastArray;
 
 -(NSInteger)numberOfDaysInForecast;

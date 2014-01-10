@@ -11,15 +11,14 @@
 #import "CurrentWeather.h"
 #import "WeatherForecast.h"
 
-typedef void (^CompletionBlock)(void);
-typedef void (^FailureBlock)(NSError *err);
+typedef void (^CompletionBlock)(NSHTTPURLResponse *response, NSError *err);
 
 @interface WeatherFetcher : NSObject <NSURLConnectionDataDelegate, NSURLConnectionDelegate>
 
 +(WeatherFetcher *)defaultFetcher;
 
--(void)fetchCurrentLocalWeatherWithCompletion:(CompletionBlock)completion orFailure:(FailureBlock)failure;
--(void)fetch3DayLocalForecastWithCompletion:(CompletionBlock)completion orFailure:(FailureBlock)failure;
+-(void)fetchCurrentLocalWeatherWithCompletion:(CompletionBlock)completion;
+-(void)fetch3DayLocalForecastWithCompletion:(CompletionBlock)completion;
 
 -(CurrentWeather *)currentWeather;
 -(WeatherForecast *)lastForecast;

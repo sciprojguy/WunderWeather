@@ -10,8 +10,8 @@
 when you sign up for the Weather Underground API you'll get a token you can include in the URL
  **/
 
-const NSString *weatherBaseURL = @"http://api.wunderground.com/api/_YOUR_TOKEN_GOES_HERE_";
-const NSString *weather3DayForecastURL = @"http://api.wunderground.com/api/_YOUR_TOKEN_GOES_HERE_/forecast/";
+const NSString *weatherBaseURL = @"http://api.wunderground.com/api/b26094b9ad7417d9";
+const NSString *weather3DayForecastURL = @"http://api.wunderground.com/api/b26094b9ad7417d9/forecast/";
 
 #import "WeatherFetcher.h"
 
@@ -20,6 +20,7 @@ const NSString *weather3DayForecastURL = @"http://api.wunderground.com/api/_YOUR
 @property (nonatomic, strong) NSDictionary *currentWeatherDict;
 @property (nonatomic, strong) NSDictionary *forecast3DaysDict;
 @property (nonatomic, strong) NSMutableData *fetchedData;
+@property (nonatomic, strong) NSHTTPURLResponse *response;
 @property (nonatomic, assign) BOOL isDone;
 @property (nonatomic, assign) BOOL didFail;
 @property (atomic, strong) NSError *lastError;
@@ -46,7 +47,7 @@ const NSString *weather3DayForecastURL = @"http://api.wunderground.com/api/_YOUR
     return fetcher;
 }
 
--(void)fetchCurrentLocalWeatherWithCompletion:(CompletionBlock)completion orFailure:(FailureBlock)failure
+-(void)fetchCurrentLocalWeatherWithCompletion:(CompletionBlock)completion
 {
     [self.opQueue addOperationWithBlock:^{
         NSURL *weatherURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/conditions/q/%@.json", weatherBaseURL, @"FL/Tampa"]];
@@ -62,25 +63,22 @@ const NSString *weather3DayForecastURL = @"http://api.wunderground.com/api/_YOUR
         {
             [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         }
-                
+
         if(NO == self.didFail)
         {
-            // parse JSON into "current weather" dictionary
             NSError *error = nil;
-            // broadcast NSNotification to tell view controllers to fetch
             NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:self.fetchedData options:kNilOptions error:&error];
             self.currentWeatherDict = [[NSDictionary alloc] initWithDictionary:dataDict];
-            //TODO - need to cache this to a plist?
            if(nil != completion)
             {
-                completion();
+                completion(self.response, error);
             }
         }
         else
         {
-            if(nil != failure)
+            if(nil != completion)
             {
-                failure(self.lastError);
+                completion( self.response, self.lastError);
             }
         }
         
@@ -88,7 +86,7 @@ const NSString *weather3DayForecastURL = @"http://api.wunderground.com/api/_YOUR
     }];
 }
 
--(void)fetch3DayLocalForecastWithCompletion:(CompletionBlock)completion orFailure:(FailureBlock)failure
+-(void)fetch3DayLocalForecastWithCompletion:(CompletionBlock)completion
 {
     [self.opQueue addOperationWithBlock:^{
        NSURL *weatherURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/forecast/q/%@.json", weatherBaseURL, @"FL/Tampa"]];
@@ -104,28 +102,22 @@ const NSString *weather3DayForecastURL = @"http://api.wunderground.com/api/_YOUR
         {
             [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         }
-                
+        
         if(NO == self.didFail)
         {
-            // parse JSON into "weather forecast" dictionary
             NSError *error = nil;
-            // broadcast NSNotification to tell view controllers to fetch
             NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:self.fetchedData options:kNilOptions error:&error];
-            
-            //TODO - need to check response for server failure and display appropriate msg
             self.forecast3DaysDict = [[NSDictionary alloc] initWithDictionary:dataDict[@"forecast"][@"simpleforecast"]];
-            
-            //TODO - need to cache this to a plist?
             if(nil != completion)
             {
-                completion();
+                completion(self.response, error);
             }
         }
         else
         {
-            if(nil != failure)
+            if(nil != completion)
             {
-                failure(self.lastError);
+                completion( self.response, self.lastError);
             }
         }
         
@@ -151,9 +143,10 @@ const NSString *weather3DayForecastURL = @"http://api.wunderground.com/api/_YOUR
 
 #pragma mark - NSURLConnectionDelegate methods
 
--(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response
 {
     self.fetchedData = [[NSMutableData alloc] initWithCapacity:0];
+    self.response = (NSHTTPURLResponse *)response;
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data

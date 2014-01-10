@@ -24,27 +24,27 @@
     WeatherFetcher *fetcher = [WeatherFetcher defaultFetcher];
 
     [SVProgressHUD showWithStatus:@"Fetching Current Weather"];
-    [fetcher fetchCurrentLocalWeatherWithCompletion:^{
+    [fetcher fetchCurrentLocalWeatherWithCompletion:^(NSHTTPURLResponse *response, NSError *err){
         dispatch_sync(dispatch_get_main_queue(), ^{
-            CurrentWeather *cw = [fetcher currentWeather];
-            [_currentWeatherView setLabelsFromModel:cw];
+            if(nil == err)
+            {
+                CurrentWeather *cw = [fetcher currentWeather];
+                [_currentWeatherView setLabelsFromModel:cw];
+            }
             [SVProgressHUD dismiss];
         });
-    } orFailure:^(NSError *err){
-        [SVProgressHUD dismiss];
-        //TBD - display error
     }];
 
     [SVProgressHUD showWithStatus:@"Fetching Weather Forecast"];
-    [fetcher fetch3DayLocalForecastWithCompletion:^{
+    [fetcher fetch3DayLocalForecastWithCompletion:^(NSHTTPURLResponse *response, NSError *err){
         dispatch_sync(dispatch_get_main_queue(), ^{
+            if(nil == err)
+            {
             _forecast = [fetcher lastForecast];
             [_forecastTable reloadData];
+            }
             [SVProgressHUD dismiss];
         });
-    } orFailure:^(NSError *err){
-        [SVProgressHUD dismiss];
-        //TBD - display error
     }];
 }
 

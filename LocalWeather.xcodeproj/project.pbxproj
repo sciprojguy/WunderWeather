@@ -37,6 +37,22 @@
 		9A976CF0178F186600040DAA /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A976CEF178F186500040DAA /* WeatherViewController.m */; };
 		9AB72AA817B2607D00E4ACAD /* WeatherForecastDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB72AA717B2607D00E4ACAD /* WeatherForecastDay.m */; };
 		9AC51962178D95700008D9E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC51961178D95700008D9E2 /* Main.storyboard */; };
+		9AE06A22185DEB880052AAA1 /* FakeWeatherUndergroundAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A21185DEB880052AAA1 /* FakeWeatherUndergroundAPI.m */; };
+		9AE06A23185DEB950052AAA1 /* FakeWeatherUndergroundAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A21185DEB880052AAA1 /* FakeWeatherUndergroundAPI.m */; };
+		9AE06A2E185E29A90052AAA1 /* OHHTTPStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A26185E29A90052AAA1 /* OHHTTPStubs.m */; };
+		9AE06A2F185E29A90052AAA1 /* OHHTTPStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A26185E29A90052AAA1 /* OHHTTPStubs.m */; };
+		9AE06A30185E29A90052AAA1 /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A27185E29A90052AAA1 /* OHHTTPStubs+NSURLSessionConfiguration.m */; };
+		9AE06A31185E29A90052AAA1 /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A27185E29A90052AAA1 /* OHHTTPStubs+NSURLSessionConfiguration.m */; };
+		9AE06A32185E29A90052AAA1 /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A29185E29A90052AAA1 /* OHHTTPStubsResponse.m */; };
+		9AE06A33185E29A90052AAA1 /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A29185E29A90052AAA1 /* OHHTTPStubsResponse.m */; };
+		9AE06A34185E29A90052AAA1 /* OHHTTPStubsResponse+HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A2B185E29A90052AAA1 /* OHHTTPStubsResponse+HTTPMessage.m */; };
+		9AE06A35185E29A90052AAA1 /* OHHTTPStubsResponse+HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A2B185E29A90052AAA1 /* OHHTTPStubsResponse+HTTPMessage.m */; };
+		9AE06A36185E29A90052AAA1 /* OHHTTPStubsResponse+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A2D185E29A90052AAA1 /* OHHTTPStubsResponse+JSON.m */; };
+		9AE06A37185E29A90052AAA1 /* OHHTTPStubsResponse+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE06A2D185E29A90052AAA1 /* OHHTTPStubsResponse+JSON.m */; };
+		9AE06A3A185E709A0052AAA1 /* FL_Tampa_Forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AE06A38185E709A0052AAA1 /* FL_Tampa_Forecast.json */; };
+		9AE06A3B185E709A0052AAA1 /* FL_Tampa_Forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AE06A38185E709A0052AAA1 /* FL_Tampa_Forecast.json */; };
+		9AE06A3C185E709A0052AAA1 /* FL_Tampa_Conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AE06A39185E709A0052AAA1 /* FL_Tampa_Conditions.json */; };
+		9AE06A3D185E709A0052AAA1 /* FL_Tampa_Conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AE06A39185E709A0052AAA1 /* FL_Tampa_Conditions.json */; };
 		9AF409D21786DF660071BFF2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF409D11786DF660071BFF2 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +111,19 @@
 		9AB72AA617B2607D00E4ACAD /* WeatherForecastDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherForecastDay.h; sourceTree = "<group>"; };
 		9AB72AA717B2607D00E4ACAD /* WeatherForecastDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherForecastDay.m; sourceTree = "<group>"; };
 		9AC51961178D95700008D9E2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9AE06A20185DEB880052AAA1 /* FakeWeatherUndergroundAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeWeatherUndergroundAPI.h; sourceTree = "<group>"; };
+		9AE06A21185DEB880052AAA1 /* FakeWeatherUndergroundAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeWeatherUndergroundAPI.m; sourceTree = "<group>"; };
+		9AE06A25185E29A90052AAA1 /* OHHTTPStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHTTPStubs.h; sourceTree = "<group>"; };
+		9AE06A26185E29A90052AAA1 /* OHHTTPStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHTTPStubs.m; sourceTree = "<group>"; };
+		9AE06A27185E29A90052AAA1 /* OHHTTPStubs+NSURLSessionConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs+NSURLSessionConfiguration.m"; sourceTree = "<group>"; };
+		9AE06A28185E29A90052AAA1 /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHTTPStubsResponse.h; sourceTree = "<group>"; };
+		9AE06A29185E29A90052AAA1 /* OHHTTPStubsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHTTPStubsResponse.m; sourceTree = "<group>"; };
+		9AE06A2A185E29A90052AAA1 /* OHHTTPStubsResponse+HTTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubsResponse+HTTPMessage.h"; sourceTree = "<group>"; };
+		9AE06A2B185E29A90052AAA1 /* OHHTTPStubsResponse+HTTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubsResponse+HTTPMessage.m"; sourceTree = "<group>"; };
+		9AE06A2C185E29A90052AAA1 /* OHHTTPStubsResponse+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubsResponse+JSON.h"; sourceTree = "<group>"; };
+		9AE06A2D185E29A90052AAA1 /* OHHTTPStubsResponse+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubsResponse+JSON.m"; sourceTree = "<group>"; };
+		9AE06A38185E709A0052AAA1 /* FL_Tampa_Forecast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FL_Tampa_Forecast.json; sourceTree = "<group>"; };
+		9AE06A39185E709A0052AAA1 /* FL_Tampa_Conditions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FL_Tampa_Conditions.json; sourceTree = "<group>"; };
 		9AF409D11786DF660071BFF2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -190,6 +219,7 @@
 		27B59B571785DE4A00107F49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9AE06A24185E29960052AAA1 /* OHHTTPStubs */,
 				27B59B581785DE4A00107F49 /* LocalWeather-Info.plist */,
 				27B59B591785DE4A00107F49 /* InfoPlist.strings */,
 				27B59B5C1785DE4A00107F49 /* main.m */,
@@ -210,6 +240,8 @@
 		27B59B761785DE4A00107F49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9AE06A38185E709A0052AAA1 /* FL_Tampa_Forecast.json */,
+				9AE06A39185E709A0052AAA1 /* FL_Tampa_Conditions.json */,
 				27B59B771785DE4A00107F49 /* LocalWeatherTests-Info.plist */,
 				27B59B781785DE4A00107F49 /* InfoPlist.strings */,
 			);
@@ -228,6 +260,8 @@
 				278F0ABC179B33EE0035F125 /* WeatherForecast.m */,
 				27B59BB01786067900107F49 /* WeatherFetcher.h */,
 				27B59BB11786067900107F49 /* WeatherFetcher.m */,
+				9AE06A20185DEB880052AAA1 /* FakeWeatherUndergroundAPI.h */,
+				9AE06A21185DEB880052AAA1 /* FakeWeatherUndergroundAPI.m */,
 			);
 			name = Fetcher;
 			sourceTree = "<group>";
@@ -271,6 +305,22 @@
 				9A09C244178EBD1B003616B4 /* CurrentWeatherView.m */,
 			);
 			name = CurrentWeatherView;
+			sourceTree = "<group>";
+		};
+		9AE06A24185E29960052AAA1 /* OHHTTPStubs */ = {
+			isa = PBXGroup;
+			children = (
+				9AE06A25185E29A90052AAA1 /* OHHTTPStubs.h */,
+				9AE06A26185E29A90052AAA1 /* OHHTTPStubs.m */,
+				9AE06A27185E29A90052AAA1 /* OHHTTPStubs+NSURLSessionConfiguration.m */,
+				9AE06A28185E29A90052AAA1 /* OHHTTPStubsResponse.h */,
+				9AE06A29185E29A90052AAA1 /* OHHTTPStubsResponse.m */,
+				9AE06A2A185E29A90052AAA1 /* OHHTTPStubsResponse+HTTPMessage.h */,
+				9AE06A2B185E29A90052AAA1 /* OHHTTPStubsResponse+HTTPMessage.m */,
+				9AE06A2C185E29A90052AAA1 /* OHHTTPStubsResponse+JSON.h */,
+				9AE06A2D185E29A90052AAA1 /* OHHTTPStubsResponse+JSON.m */,
+			);
+			name = OHHTTPStubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +400,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B59B691785DE4A00107F49 /* Images.xcassets in Resources */,
+				9AE06A3C185E709A0052AAA1 /* FL_Tampa_Conditions.json in Resources */,
+				9AE06A3A185E709A0052AAA1 /* FL_Tampa_Forecast.json in Resources */,
 				27B59B5B1785DE4A00107F49 /* InfoPlist.strings in Resources */,
 				9AC51962178D95700008D9E2 /* Main.storyboard in Resources */,
 				9A09C23E178E3BB3003616B4 /* SVProgressHUD.bundle in Resources */,
@@ -360,6 +412,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE06A3B185E709A0052AAA1 /* FL_Tampa_Forecast.json in Resources */,
+				9AE06A3D185E709A0052AAA1 /* FL_Tampa_Conditions.json in Resources */,
 				27B59B7A1785DE4A00107F49 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,13 +430,19 @@
 				27B59BB21786067900107F49 /* WeatherFetcher.m in Sources */,
 				27B59B5D1785DE4A00107F49 /* main.m in Sources */,
 				9A09C23F178E3BB3003616B4 /* SVProgressHUD.m in Sources */,
+				9AE06A30185E29A90052AAA1 /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */,
 				9A09C245178EBD1B003616B4 /* CurrentWeatherView.m in Sources */,
 				9A976CF0178F186600040DAA /* WeatherViewController.m in Sources */,
 				9A550DA71792CC3700BEB80B /* CurrentWeather.m in Sources */,
+				9AE06A36185E29A90052AAA1 /* OHHTTPStubsResponse+JSON.m in Sources */,
+				9AE06A34185E29A90052AAA1 /* OHHTTPStubsResponse+HTTPMessage.m in Sources */,
 				273BE9C2179B2BA500D7FBA6 /* WeatherData.xcdatamodeld in Sources */,
+				9AE06A32185E29A90052AAA1 /* OHHTTPStubsResponse.m in Sources */,
 				273BE9CA179B2D0500D7FBA6 /* _CurrentLocalWeather.m in Sources */,
 				273BE9CB179B2D0500D7FBA6 /* CurrentLocalWeather.m in Sources */,
 				278F0ABD179B33EE0035F125 /* WeatherForecast.m in Sources */,
+				9AE06A22185DEB880052AAA1 /* FakeWeatherUndergroundAPI.m in Sources */,
+				9AE06A2E185E29A90052AAA1 /* OHHTTPStubs.m in Sources */,
 				9A201CD217B3B3810053674E /* ForecastTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,9 +451,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE06A23185DEB950052AAA1 /* FakeWeatherUndergroundAPI.m in Sources */,
+				9AE06A35185E29A90052AAA1 /* OHHTTPStubsResponse+HTTPMessage.m in Sources */,
 				27B59BB31786067900107F49 /* WeatherFetcher.m in Sources */,
+				9AE06A33185E29A90052AAA1 /* OHHTTPStubsResponse.m in Sources */,
 				27B59B7C1785DE4A00107F49 /* LocalWeatherTests.m in Sources */,
+				9AE06A2F185E29A90052AAA1 /* OHHTTPStubs.m in Sources */,
 				9A550DA81792CC3700BEB80B /* CurrentWeather.m in Sources */,
+				9AE06A37185E29A90052AAA1 /* OHHTTPStubsResponse+JSON.m in Sources */,
+				9AE06A31185E29A90052AAA1 /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

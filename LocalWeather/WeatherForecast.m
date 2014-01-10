@@ -10,7 +10,6 @@
 
 @interface WeatherForecast()
 
-@property (nonatomic, strong) NSArray *forecastDays;
 
 @end
 
@@ -22,6 +21,7 @@
     if(nil != self)
     {
         self.forecastDays = [[NSArray alloc] initWithArray:simpleForecastArray];
+        NSLog(@"%@", self.forecastDays);
     }
     return self;
 }
