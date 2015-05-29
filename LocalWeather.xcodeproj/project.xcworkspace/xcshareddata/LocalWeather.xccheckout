@@ -10,29 +10,29 @@
 	<string>LocalWeather</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>81FD0B82-8320-4595-ADAA-9460F5F09DD7</key>
+		<key>C3403C00CA8BEDB7BEC440EA0FE088920DF1F1A7</key>
 		<string>https://github.com/sciprojguy/WunderWeather.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>LocalWeather.xcodeproj/project.xcworkspace</string>
+	<string>LocalWeather.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>81FD0B82-8320-4595-ADAA-9460F5F09DD7</key>
+		<key>C3403C00CA8BEDB7BEC440EA0FE088920DF1F1A7</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/sciprojguy/WunderWeather.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>81FD0B82-8320-4595-ADAA-9460F5F09DD7</string>
+	<string>C3403C00CA8BEDB7BEC440EA0FE088920DF1F1A7</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>81FD0B82-8320-4595-ADAA-9460F5F09DD7</string>
+			<string>C3403C00CA8BEDB7BEC440EA0FE088920DF1F1A7</string>
 			<key>IDESourceControlWCCName</key>
 			<string>WunderWeather</string>
 		</dict>
